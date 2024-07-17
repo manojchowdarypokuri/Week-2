@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Voyage Slider | GSAP</title>
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.1/css/all.min.css'>
+    <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Montserrat&amp;display=swap"rel="stylesheet'>
+    <link rel="stylesheet" href="./style.css">
+
+</head>
+
+<body>
+    <!-- partial:index.partial.html -->
+    <div class="app">
+
+        <div class="cardList">
+            <button class="cardList__btn btn btn--left">
+			<div class="icon">
+				<svg>
+					<use xlink:href="#arrow-left"></use>
+				</svg>
+			</div>
+		</button>
+
+            <div class="cards__wrapper">
+                <div class="card current--card">
+                    <div class="card__image">
+                        <img src="https://upload.wikimedia.org/wikipedia/en/b/bd/Doraemon_character.png" alt="" />
+                    </div>
+                </div>
+
+                <div class="card next--card">
+                    <div class="card__image">
+                        <img src="https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/f4d0afb6-ede2-4dd4-89c3-bbc4c069e360/width=1568,quality=90/02410-1110395442.jpeg" alt="" />
+                    </div>
+                </div>
+
+                <div class="card previous--card">
+                    <div class="card__image">
+                        <img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/e921ab83-c311-431b-971f-c8c7f87435b8/dfvnt4k-713d5199-d8fd-49b9-9370-102387a8d1d7.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcL2U5MjFhYjgzLWMzMTEtNDMxYi05NzFmLWM4YzdmODc0MzViOFwvZGZ2bnQ0ay03MTNkNTE5OS1kOGZkLTQ5YjktOTM3MC0xMDIzODdhOGQxZDcucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.Y5Cu1l_wjwlqKJiILOfZvbNmgOQ51Z_h75Mlb5BnIQM"
+                            alt="" />
+                    </div>
+                </div>
+            </div>
+
+            <button class="cardList__btn btn btn--right">
+			<div class="icon">
+				<svg>
+					<use xlink:href="#arrow-right"></use>
+				</svg>
+			</div>
+		</button>
+        </div>
+
+        <div class="infoList">
+            <div class="info__wrapper">
+                <div class="info current--info">
+                    <h1 class="text name">Doraemon </h1>
+                    <h4 class="text location">Character</h4>
+
+                </div>
+
+                <div class="info next--info">
+                    <h1 class="text name">Minamoto Shizuka</h1>
+                    <h4 class="text location">Character</h4>
+
+                </div>
+
+                <div class="info previous--info">
+                    <h1 class="text name">Suneo Honekawa</h1>
+                    <h4 class="text location">Character</h4>
+
+                </div>
+            </div>
+        </div>
+
+
+        <div class="app__bg">
+            <div class="app__bg__image current--image">
+                <img src="https://upload.wikimedia.org/wikipedia/en/b/bd/Doraemon_character.png" alt="" />
+            </div>
+            <div class="app__bg__image next--image">
+                <img src="https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/f4d0afb6-ede2-4dd4-89c3-bbc4c069e360/width=1568,quality=90/02410-1110395442.jpeg" alt="" />
+            </div>
+            <div class="app__bg__image previous--image">
+                <img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/e921ab83-c311-431b-971f-c8c7f87435b8/dfvnt4k-713d5199-d8fd-49b9-9370-102387a8d1d7.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcL2U5MjFhYjgzLWMzMTEtNDMxYi05NzFmLWM4YzdmODc0MzViOFwvZGZ2bnQ0ay03MTNkNTE5OS1kOGZkLTQ5YjktOTM3MC0xMDIzODdhOGQxZDcucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.Y5Cu1l_wjwlqKJiILOfZvbNmgOQ51Z_h75Mlb5BnIQM"
+                    alt="" />
+            </div>
+        </div>
+    </div>
+
+    <div class="loading__wrapper">
+        <div class="loader--text">Loading...</div>
+        <div class="loader">
+            <span></span>
+        </div>
+    </div>
+
+
+    <svg class="icons" style="display: none;">
+	<symbol id="arrow-left" xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'>
+		<polyline points='328 112 184 256 328 400'
+					 style='fill:none;stroke:#fff;stroke-linecap:round;stroke-linejoin:round;stroke-width:48px' />
+	</symbol>
+	<symbol id="arrow-right" xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'>
+		<polyline points='184 112 328 256 184 400'
+					 style='fill:none;stroke:#fff;stroke-linecap:round;stroke-linejoin:round;stroke-width:48px' />
+	</symbol>
+</svg>
+    <!-- partial -->
+    <script src='https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js'></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/3.3.3/gsap.min.js'></script>
+    <script src="./script.js"></script>
+
+</body>
+
+</html>
